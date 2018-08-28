@@ -1,0 +1,7 @@
+#Mon Aug 27 23:44:45 EDT 2018
+base.0=C\:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d633b78ef341f2670653856138764bc93d5ac9dc
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_1db6df4386832a3e69a31a45f6abdbdf7142cc89\\classes.dex
+base.1=C\:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_1db6df4386832a3e69a31a45f6abdbdf7142cc89
+file.0=C\:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d633b78ef341f2670653856138764bc93d5ac9dc\\classes.dex

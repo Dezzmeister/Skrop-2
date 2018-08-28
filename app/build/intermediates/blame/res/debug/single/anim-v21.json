@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\open_on_phone_path_2_animation.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\a52361278c17ee9969b8a31058eb89dd6acb19f3\\output\\res\\anim-v21\\open_on_phone_path_2_animation.xml"
+    },
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\092dac0cec2b2a0fac8bc39ccf9becca3bac5331\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\generic_confirmation_icon_animation.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\a52361278c17ee9969b8a31058eb89dd6acb19f3\\output\\res\\anim-v21\\generic_confirmation_icon_animation.xml"
+    },
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\generic_confirmation_generic_confirmation_animation.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\a52361278c17ee9969b8a31058eb89dd6acb19f3\\output\\res\\anim-v21\\generic_confirmation_generic_confirmation_animation.xml"
+    },
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\open_on_phone_path_1_animation.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\a52361278c17ee9969b8a31058eb89dd6acb19f3\\output\\res\\anim-v21\\open_on_phone_path_1_animation.xml"
+    },
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\open_on_phone_arrow_animation.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\a52361278c17ee9969b8a31058eb89dd6acb19f3\\output\\res\\anim-v21\\open_on_phone_arrow_animation.xml"
+    },
+    {
+        "merged": "C:\\android-games\\SkropClient\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Joe Junior\\.android\\build-cache\\092dac0cec2b2a0fac8bc39ccf9becca3bac5331\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    }
+]

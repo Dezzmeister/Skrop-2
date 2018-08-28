@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\6ef0f10a0d40cf9403b54421851b3d30490f4c9f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_1365337850f4bd61143d5b308e55a316508da92b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\9c9858bc10676322954a656621d6c78291666f8c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_0a2013968a8df6278e9f70d661ef6d1c4f4902fe.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android-games\SkropClient\android\app\libs\processing-core.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c88da33bc2c08eb0a88c440187a764e25ef805ca">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\transforms\dex\debug\folders\1000\2\processing-core_232187b04ff9fa4a9cbd093b3bba2c546c947058\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\a52361278c17ee9969b8a31058eb89dd6acb19f3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d4d699dd197929286d19b015f4c142b8360f2137">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_918532fb3536adef9fe8c5499f0f3dd051c44cfb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\JellyBean\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_0e30b09fd83e30cb1e9aad248b726b73df4de198.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\android-games\SkropClient\android\app\libs\processing-core.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c88da33bc2c08eb0a88c440187a764e25ef805ca">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\processing-core_232187b04ff9fa4a9cbd093b3bba2c546c947058.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\5915cb1b8b25a598255972d065009a9d4929d08e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_4a327b081d0dd867586716c6261c0fd4f5d802e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\f0b7f5a59718a72749e1222c890dbff3a42d7184\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_bce8a07b364cbfb88ce1bae17b91277f1fea5343.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\f239f036fec12af33bef19cb63844a72a168ca52\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_31088951dfcf37f5c09910351b18dec67e636923.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android-games\SkropClient\android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1db6df4386832a3e69a31a45f6abdbdf7142cc89\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android-games\SkropClient\android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="5aa8c77f13536bfb4e742c1ba500e286ff3ff231">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_d633b78ef341f2670653856138764bc93d5ac9dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\e44c9cefc0cd1b0111bd50c5037d1d93c29fb1db\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_699b8df22a3408bc3317990c22ab276ecc462709.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\7fccc1d93866356db3d86e4508a4549e5b1cba49\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_b9e94de4fad82b9be3b3c9d6223d5cdafdb72ff3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\9ea3e709c1bdbc18a21bea5757c1080b8e8882e1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_9a1eee4d5c4dca3f89e3465d5cb45f2d987e48c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\71ec8cf2cf25032e01b419d8f592abc3538daadb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_0cfbfee02df9762ad122d71668da812e7e7fcbf3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\c278803a76f739bb49e2afa445f6fac97f14ab0e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_0fc958f74fdc8735aa68cf25d2d0654515e1f538.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\419a0d03bec2da84fcaf528997d3ef0e78d6e93e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_ae6ae6fdab860e7c3316d4fcd363206c48678214.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android-games\SkropClient\android\app\libs\support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\transforms\dex\debug\folders\1000\2\support-annotations-25.2.0_9e0d0022934d2ebf8277eb72772caf32b569f4be\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\d7ebb4b23be10cf95e4e60a909a42411eb3968f5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="cddfbb68753c7b1222ffb7af97bfd9ecf413aba7">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_d60a81e1a4f86feddc5650e73cd8ae659d533581.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Joe Junior\.android\build-cache\092dac0cec2b2a0fac8bc39ccf9becca3bac5331\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="C:\android-games\SkropClient\android\app\build\intermediates\pre-dexed\debug\classes_5e339a4113b9c9d06b1217440e9fc854a8514a9f.jar" />
+    </item>
+
+</items>
