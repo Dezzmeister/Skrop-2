@@ -107,7 +107,6 @@ public class UDPClient implements Runnable {
                     inMessage = fullMessage.substring(0, fullMessage.indexOf(TERMINATOR));
 
                     System.out.println("UDP RECEIVED: " + inMessage);
-                    System.out.println(inMessage.length());
 
                     messageReceiver.pass(inMessage);
                     inBuffer.clear();

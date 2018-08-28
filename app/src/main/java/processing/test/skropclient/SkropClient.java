@@ -5,6 +5,7 @@ import processing.data.*;
 import processing.event.*; 
 import processing.opengl.*;
 import processing.test.skropclient.network.Communicator;
+import processing.test.skropclient.network.DualClient;
 import processing.test.skropclient.network.udp.UDPClient;
 
 import java.util.HashMap; 
@@ -17,9 +18,7 @@ import java.io.OutputStream;
 import java.io.IOException; 
 
 public class SkropClient extends PApplet {
-    private Communicator<String> communicator = new Communicator<String>();
-    private UDPClient client = new UDPClient("10.0.0.9", 10222, communicator);
-    private Thread clientThread = new Thread(client);
+    private DualClient client = new DualClient("10.0.0.9", 10222, 10222);
 
     public void settings() {
         fullScreen();
@@ -27,7 +26,7 @@ public class SkropClient extends PApplet {
 
     public void setup() {
         System.out.println("yee");
-        clientThread.start();
+        client.start();
     }
 
     public void draw() {
@@ -35,9 +34,8 @@ public class SkropClient extends PApplet {
     }
 
     public void mousePressed() {
-        communicator.send("from da fone");
-        System.out.println("sent");
-        background(255,0,0);
+        client.sendUDP("udp from phone");
+        client.sendTCP("tcp from phone");
     }
 
     public void mouseReleased() {
