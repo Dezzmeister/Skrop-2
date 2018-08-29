@@ -1,5 +1,6 @@
 package processing.test.skropclient.network.udp;
 
+import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
@@ -150,5 +151,13 @@ public class UDPClient implements Runnable {
      */
     public void setIncomingPacketMaxLength(int maxLength) {
         incomingPacketMaxLength = maxLength;
+    }
+
+    protected void finalize() {
+        try {
+            channel.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

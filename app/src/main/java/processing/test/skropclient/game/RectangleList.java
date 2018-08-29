@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import processing.core.PApplet;
+import processing.core.PConstants;
+
 public class RectangleList implements Serializable {
 
     /**
@@ -44,6 +47,7 @@ public class RectangleList implements Serializable {
         }
 
         while (list.size() < maxRectangles && addRandomRectangle()) {
+            ;
         }
     }
 
@@ -88,7 +92,7 @@ public class RectangleList implements Serializable {
                     + " attempts. Consider lowering the amound of rectangles or raising the max spawn tries.");
             return false;
         } else {
-            list.add(new Rectangle(x, y, randomBoundedMaxWidth(), randomBoundedMaxHeight()));
+            list.add(new Rectangle(x, y, randomBoundedMaxWidth(), randomBoundedMaxHeight(), list.size()));
             return true;
         }
     }

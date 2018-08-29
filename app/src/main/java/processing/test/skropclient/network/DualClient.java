@@ -21,6 +21,10 @@ public class DualClient {
         udpThread = new Thread(udpClient, "Skrop UDP Client");
     }
 
+    public DualClient(SkropServerObject serverObject) {
+        this(serverObject.address, serverObject.tcpPort, serverObject.udpPort);
+    }
+
     public void start() {
         tcpThread.start();
         udpThread.start();
@@ -81,6 +85,14 @@ public class DualClient {
         }
 
         return null;
+    }
+
+    public TCPClient tcpClient() {
+        return tcpClient;
+    }
+
+    public UDPClient udpClient() {
+        return udpClient;
     }
 
     public Communicator<String> getTCPCommunicator() {

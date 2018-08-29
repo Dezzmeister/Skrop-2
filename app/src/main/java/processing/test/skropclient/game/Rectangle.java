@@ -12,28 +12,31 @@ public final class Rectangle implements Serializable {
     /**
      *
      */
-    private static final long serialVersionUID = 2772958065815818472L;
+    private static final long serialVersionUID = -3838813427155057819L;
     public final float x;
     public final float y;
 
     public float height;
     public float width;
 
-    public transient final float maxHeight;
-    public transient final float maxWidth;
+    public final float maxHeight;
+    public final float maxWidth;
 
-    private transient boolean growing = true;
-    private transient float widthGrowthSpeed = 0.005f;
-    private transient float heightGrowthSpeed;
-    private transient boolean completed = false;
+    public final float id;
+
+    private boolean growing = true;
+    private float widthGrowthSpeed = 0.005f;
+    private float heightGrowthSpeed;
+    private boolean completed = false;
 
     private final int color = generateRandomColor();
 
-    public Rectangle(float _x, float _y, float _maxWidth, float _maxHeight) {
+    public Rectangle(float _x, float _y, float _maxWidth, float _maxHeight, float _id) {
         x = _x;
         y = _y;
         maxWidth = _maxWidth;
         maxHeight = _maxHeight;
+        id = _id;
 
         calculateHeightGrowthSpeed();
     }

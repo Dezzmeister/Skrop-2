@@ -4,8 +4,10 @@ import processing.core.*;
 import processing.data.*; 
 import processing.event.*; 
 import processing.opengl.*;
+import processing.test.skropclient.game.Game;
 import processing.test.skropclient.network.Communicator;
 import processing.test.skropclient.network.DualClient;
+import processing.test.skropclient.network.SkropServerObject;
 import processing.test.skropclient.network.udp.UDPClient;
 
 import java.util.HashMap; 
@@ -18,24 +20,28 @@ import java.io.OutputStream;
 import java.io.IOException; 
 
 public class SkropClient extends PApplet {
-    private DualClient client = new DualClient("10.0.0.9", 10222, 10222);
+    private Game game = new Game(this);
 
     public void settings() {
         fullScreen();
     }
 
+    @Override
     public void setup() {
-        System.out.println("yee");
-        client.start();
+        game.setServer("10.0.0.9", 10222, 10223);
     }
 
+    @Override
     public void draw() {
         background(150);
+        game.update();
+        game.draw();
     }
 
+    @Override
     public void mousePressed() {
-        client.sendUDP("udp from phone");
-        client.sendTCP("tcp from phone");
+        game.connect();
+        game.mousePressed();
     }
 
     public void mouseReleased() {

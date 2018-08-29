@@ -2,10 +2,16 @@ package processing.test.skropclient.network.tcp;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.net.BindException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketAddress;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import processing.test.skropclient.network.Communicator;
 import processing.test.skropclient.network.RecentPasser;
@@ -17,6 +23,7 @@ public class TCPClient implements Runnable {
     private Socket socket;
     private final RecentPasser<String> receiver;
     private final RecentPasser<String> sender;
+    public AtomicBoolean bindFailed;
 
     /**
      * Creates a <code>TCPClient</code> that will send and receive data through the
@@ -82,14 +89,17 @@ public class TCPClient implements Runnable {
      */
     @Override
     public void run() {
+        try {
+            InetAddress serverAddress = InetAddress.getByName(address);
 
-        while (true) {
+            while (true) {
+                socket = new Socket(serverAddress, port);
+                //socket.connect(new InetSocketAddress(address, port));
+                //socket.bind(new InetSocketAddress(address, port));
+                bindFailed = new AtomicBoolean(false);
 
-            try {
-
-                socket = new Socket(address, port);
                 System.out.println("TCP Client connected to " + socket.getInetAddress().getHostAddress()
-                        + " on local port " + socket.getLocalPort() + ".");
+                        + " on remote port " + socket.getPort() + ".");
 
                 socketReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 socketWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -111,9 +121,25 @@ public class TCPClient implements Runnable {
 
                 socket.close();
                 receiver.pass(null);
-            } catch (Exception e) {
-                e.printStackTrace();
             }
+        } catch (BindException e) {
+            bindFailed = new AtomicBoolean(true);
+            e.printStackTrace();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public AtomicBoolean bindFailed() {
+        return bindFailed;
+    }
+
+    protected void finalize() {
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
