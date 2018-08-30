@@ -3,6 +3,7 @@ package processing.test.skropclient.game;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import processing.core.PApplet;
+import processing.core.PConstants;
 import processing.test.skropclient.game.state.GameState;
 import processing.test.skropclient.network.DualClient;
 import processing.test.skropclient.network.Serialize;
@@ -18,6 +19,10 @@ public class Game {
     private SkropServerObject server2;
 
     private RectangleList rectangles;
+
+    private boolean client1 = false;
+    private int myScore = 0;
+    private int enemyScore = 0;
 
     private Runnable drawFunction = new Runnable() {
         public void run() {
@@ -56,42 +61,79 @@ public class Game {
                 break;
             case IN_GAME:
                 updateInGame();
-                drawFunction = inGameDrawFunction;
                 break;
         }
     }
 
-    private Runnable inGameDrawFunction = new Runnable() {
-        public void run() {
-            rectangles.drawRectangles(parent);
+    private void inGameDrawFunction() {
+        parent.noStroke();
+        for (Rectangle r : rectangles.getRectangles()) {
+            int x = (int)(r.x * parent.width);
+            int y = (int)(r.y * parent.height);
+
+            int width = (int)(r.width * parent.width);
+            int height = (int)(r.height * parent.height);
+
+            parent.fill(r.color());
+            parent.rectMode(PConstants.CENTER);
+            parent.rect(x,y,width,height);
         }
-    };
+    }
 
     public void draw() {
-        drawFunction.run();
+        switch (gameState) {
+            case IN_GAME:
+                inGameDrawFunction();
+                break;
+        }
     }
 
     private void updateInGame() {
-        String udpReceived = client.receiveUDP();
-        if (udpReceived.startsWith("world ")) {
-            String worldData = udpReceived.substring(6);
+        String tcpReceived = client.receiveTCP();
+        if (tcpReceived.startsWith("sync s1:")) {
+            int s1 = Integer.parseInt(tcpReceived.substring(tcpReceived.indexOf(":")+1, tcpReceived.indexOf("s2:")));
+            int s2 = Integer.parseInt(tcpReceived.substring(tcpReceived.indexOf("s2:")+3, tcpReceived.indexOf("w:")));
+
+            if (client1) {
+                myScore = s1;
+                enemyScore = s2;
+            } else {
+                myScore = s2;
+                enemyScore = s1;
+            }
+            String worldData = tcpReceived.substring(tcpReceived.indexOf("w:") + 2);
 
             try {
                 rectangles = (RectangleList) Serialize.fromString(worldData);
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        } else {
+            if (rectangles != null) {
+                rectangles.update(1);
+            }
         }
     }
 
     private void updateWaitingForGameBegin() {
-        if (client.receiveTCP() != null && client.receiveTCP().equals("begin")) {
+        String tcpReceived = client.receiveTCP();
+
+        if (tcpReceived != null && tcpReceived.startsWith("world ")) {
+            String worldData = tcpReceived.substring("world ".length() + 1);
+            try {
+                rectangles = (RectangleList) Serialize.fromString(worldData);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
             gameState = GameState.IN_GAME;
         }
     }
 
     private void updateWaitingForConnection2() {
-        if (client.receiveTCP() != null && client.receiveTCP().equals("waiting for game")) {
+        String tcpReceived = client.receiveTCP();
+
+        if (tcpReceived != null && tcpReceived.equals("waiting for game")) {
             gameState = GameState.WAITING_FOR_GAME_BEGIN;
         }
     }
@@ -117,10 +159,12 @@ public class Game {
                 } else {
                     client.sendTCP("hello");
                     gameState = GameState.WAITING_FOR_CONNECTION_2;
+                    client1 = true;
                 }
             } else {
                 client.sendTCP("hello");
                 gameState = GameState.WAITING_FOR_CONNECTION_2;
+                client1 = false; //It's best to be explicit here, for clarity
             }
         }
     }
@@ -130,7 +174,7 @@ public class Game {
             float x = parent.mouseX/(float)parent.width;
             float y = parent.mouseY/(float)parent.height;
 
-            client.sendUDP("mouse " + x + "," + y);
+            client.sendTCP("mouse " + x + "," + y);
         }
 
         if (gameState == GameState.WAITING_FOR_GAME_BEGIN) {

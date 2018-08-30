@@ -12,7 +12,7 @@ public class RectangleList implements Serializable {
     /**
      *
      */
-    private static final long serialVersionUID = 567389107909241167L;
+    private static final long serialVersionUID = -7614719587964684947L;
 
     public static final int MAX_SPAWN_TRIES = 50;
 
@@ -114,6 +114,10 @@ public class RectangleList implements Serializable {
         }
 
         return true;
+    }
+
+    public List<Rectangle> getRectangles() {
+        return list;
     }
 
     private float randomBoundedMaxWidth() {

@@ -28,6 +28,7 @@ public class SkropClient extends PApplet {
 
     @Override
     public void setup() {
+        frameRate(25);
         game.setServer("10.0.0.9", 10222, 10223);
     }
 
